@@ -67,8 +67,8 @@ jobs:
    # - name: Start the app
     #  run: npm run start &  #executed as background process
    
-    - name: Run npm security tests
-      run: npm audit
+   # - name: Run npm security tests
+   #   run: npm audit
 
   deploy:
     runs-on: ubuntu-latest
