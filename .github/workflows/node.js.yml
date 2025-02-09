@@ -63,7 +63,9 @@ jobs:
         node-version: 20 #${{ matrix.node-version }}
         cache: 'npm'
     - name: Install program dependencies
-      run: npm install
+      run: |
+        npm install
+        npx playwright install
    # - name: Start the app
     #  run: npm run start &  #executed as background process
    
