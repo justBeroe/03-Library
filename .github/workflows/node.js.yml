@@ -46,7 +46,9 @@ jobs:
         npm run server &
         sleep 5  # Wait for 5 seconds
     - name: Run Integration tests
-      run: npm test 
+      run: |
+        npx playwright install  
+        npm test 
     # |# tee test-output.log
     
    # - name: Upload test output as artifact
