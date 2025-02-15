@@ -35,7 +35,7 @@ jobs:
    # - name: Start the app
     #  run: npm run start &  #executed as background process
     - name: Run integration tests
-      run: npm test | tee test-output.log
+      run: npm test #| tee test-output.log
 
    # - name: Upload test output as artifact
     #  uses: actions/upload-artifact@v4
