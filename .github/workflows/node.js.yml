@@ -38,7 +38,8 @@ jobs:
       run: |
        npm start &
        npm run server &
-      #wait  # Ensures background processes complete before moving on
+       wait  
+      # Ensures background processes complete before moving on
 
     - name: Run Integration tests
       run: npm test 
