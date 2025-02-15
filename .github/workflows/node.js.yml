@@ -34,13 +34,17 @@ jobs:
       run: npm install
    # - name: Start the app
     #  run: npm run start &  #executed as background process
-    - name: Start server in background
+    - name: Start FE server in background
       run: |
        npm start &
-       npm run server &
-       wait  
+       sleep 5  #Wait for 5 seconds
+      #npm run server &
+      #wait  
       # Ensures background processes complete before moving on
-
+    - name: Start BE server in background
+      run: |
+        npm run server &
+        sleep 5  # Wait for 5 seconds
     - name: Run Integration tests
       run: npm test 
     # |# tee test-output.log
