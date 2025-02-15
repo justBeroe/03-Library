@@ -34,11 +34,14 @@ jobs:
       run: npm install
    # - name: Start the app
     #  run: npm run start &  #executed as background process
-    - name: Run integration tests
+    - name: Start server in background
       run: |
-        npm start
-        npm run server
-        npm test  
+       npm start &
+       npm run server &
+      #wait  # Ensures background processes complete before moving on
+
+    - name: Run Integration tests
+      run: npm test 
     # |# tee test-output.log
     
    # - name: Upload test output as artifact
