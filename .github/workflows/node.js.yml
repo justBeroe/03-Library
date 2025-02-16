@@ -45,7 +45,7 @@ jobs:
       run: |
         npm run server &
         sleep 5  # Wait for 5 seconds
-    - name: Run Integration tests
+    - name: Install browsers & run Integration tests 
       run: |
         npx playwright install  
         npm test 
